@@ -1,29 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
-<defs>
-  <style type="text/css">
-    .st194{fill:#2D2D2D;stroke:#FFFFFF;stroke-width:0.6317;stroke-miterlimit:10;}
-    .st23{fill:#FFFFFF;}
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 480" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Fascia Atlas</title>
+  <desc id="logoDesc">Body schematic with myofascial trigger-point markers and a pain referral zone, in the style of the Fascia Atlas app.</desc>
+  <defs>
+    <filter id="blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5.5" />
+    </filter>
+  </defs>
 
-    .z-breathe {
-      animation: breathe 2.5s ease-in-out infinite;
-    }
+  <!-- ground shadow (as in the app) -->
+  <ellipse cx="110" cy="476" rx="42" ry="4" fill="#e2e8f0" />
 
-    @keyframes breathe {
-      0%, 100% { opacity: 0.7; }
-      50% { opacity: 1; }
-    }
-  </style>
-</defs>
+  <!-- referral zone glowing behind the body, as in the atlas -->
+  <ellipse cx="137" cy="92" rx="17" ry="9.5" fill="#ef4444" opacity="0.28" filter="url(#blur)" transform="rotate(-24 137 92)" />
 
-<g>
-  <path class="st194" d="M24.51,28.51H5.49c-2.21,0-4-1.79-4-4V5.49c0-2.21,1.79-4,4-4h19.03c2.21,0,4,1.79,4,4v19.03
-    C28.51,26.72,26.72,28.51,24.51,28.51z"/>
-  <g class="z-breathe">
-    <path class="st23" d="M15.47,7.1l-1.3,1.85c-0.2,0.29-0.54,0.47-0.9,0.47h-7.1V7.09C6.16,7.1,15.47,7.1,15.47,7.1z"/>
-    <polygon class="st23" points="24.3,7.1 13.14,22.91 5.7,22.91 16.86,7.1"/>
-    <path class="st23" d="M14.53,22.91l1.31-1.86c0.2-0.29,0.54-0.47,0.9-0.47h7.09v2.33H14.53z"/>
+  <!-- body silhouette: same Catmull-Rom path as BodyFigure.tsx -->
+  <path d="M 110.0 6.0 C 113.5 9.0, 127.2 17.7, 131.0 24.0 C 134.8 30.3, 133.8 38.7, 133.0 44.0 C 132.2 49.3, 128.2 52.8, 126.0 56.0 C 123.8 59.2, 121.2 60.3, 120.0 63.0 C 118.8 65.7, 116.8 69.2, 119.0 72.0 C 121.2 74.8, 126.7 77.3, 133.0 80.0 C 139.3 82.7, 152.2 84.0, 157.0 88.0 C 161.8 92.0, 163.7 100.0, 162.0 104.0 C 160.3 108.0, 148.0 105.0, 147.0 112.0 C 146.0 119.0, 153.5 133.0, 156.0 146.0 C 158.5 159.0, 160.3 178.0, 162.0 190.0 C 163.7 202.0, 166.8 209.7, 166.0 218.0 C 165.2 226.3, 159.5 241.0, 157.0 240.0 C 154.5 239.0, 152.7 222.0, 151.0 212.0 C 149.3 202.0, 148.0 190.0, 147.0 180.0 C 146.0 170.0, 146.3 162.7, 145.0 152.0 C 143.7 141.3, 141.0 116.3, 139.0 116.0 C 137.0 115.7, 134.8 137.0, 133.0 150.0 C 131.2 163.0, 128.0 179.3, 128.0 194.0 C 128.0 208.7, 131.8 221.0, 133.0 238.0 C 134.2 255.0, 136.3 277.3, 135.0 296.0 C 133.7 314.7, 126.2 334.3, 125.0 350.0 C 123.8 365.7, 129.3 375.3, 128.0 390.0 C 126.7 404.7, 119.3 428.0, 117.0 438.0 C 114.7 448.0, 112.3 446.3, 114.0 450.0 C 115.7 453.7, 126.0 456.7, 127.0 460.0 C 128.0 463.3, 122.5 468.0, 120.0 470.0 C 117.5 472.0, 114.0 477.0, 112.0 472.0 C 110.0 467.0, 109.3 453.7, 108.0 440.0 C 106.7 426.3, 105.0 405.0, 104.0 390.0 C 103.0 375.0, 102.2 366.7, 102.0 350.0 C 101.8 333.3, 101.7 304.0, 103.0 290.0 C 104.3 276.0, 107.5 256.0, 110.0 266.0 C 112.5 276.0, 117.0 329.3, 118.0 350.0 C 119.0 370.7, 117.0 375.0, 116.0 390.0 C 115.0 405.0, 113.3 426.3, 112.0 440.0 C 110.7 453.7, 110.0 467.0, 108.0 472.0 C 106.0 477.0, 102.5 472.0, 100.0 470.0 C 97.5 468.0, 92.0 463.3, 93.0 460.0 C 94.0 456.7, 104.3 453.7, 106.0 450.0 C 107.7 446.3, 105.3 448.0, 103.0 438.0 C 100.7 428.0, 93.3 404.7, 92.0 390.0 C 90.7 375.3, 96.2 365.7, 95.0 350.0 C 93.8 334.3, 86.3 314.7, 85.0 296.0 C 83.7 277.3, 85.8 255.0, 87.0 238.0 C 88.2 221.0, 92.0 208.7, 92.0 194.0 C 92.0 179.3, 88.8 163.0, 87.0 150.0 C 85.2 137.0, 83.0 115.7, 81.0 116.0 C 79.0 116.3, 76.3 141.3, 75.0 152.0 C 73.7 162.7, 74.0 170.0, 73.0 180.0 C 72.0 190.0, 70.7 202.0, 69.0 212.0 C 67.3 222.0, 65.5 239.0, 63.0 240.0 C 60.5 241.0, 54.8 226.3, 54.0 218.0 C 53.2 209.7, 56.3 202.0, 58.0 190.0 C 59.7 178.0, 61.5 159.0, 64.0 146.0 C 66.5 133.0, 74.0 119.0, 73.0 112.0 C 72.0 105.0, 59.7 108.0, 58.0 104.0 C 56.3 100.0, 58.2 92.0, 63.0 88.0 C 67.8 84.0, 80.7 82.7, 87.0 80.0 C 93.3 77.3, 98.8 74.8, 101.0 72.0 C 103.2 69.2, 101.2 65.7, 100.0 63.0 C 98.8 60.3, 96.2 59.2, 94.0 56.0 C 91.8 52.8, 87.8 49.3, 87.0 44.0 C 86.2 38.7, 85.2 30.3, 89.0 24.0 C 92.8 17.7, 106.5 9.0, 110.0 6.0 C 113.5 3.0, 106.5 3.0, 110.0 6.0 Z" fill="#ffffff" stroke="#475569" strokeWidth="1.4" />
+
+  <!-- interior anatomy hints (front view, as in the app) -->
+  <g stroke="#94a3b8" strokeWidth="1" fill="none" opacity="0.45" strokeLinecap="round">
+    <path d="M 82,93 Q 96,86 108,90" />
+    <path d="M 138,93 Q 124,86 112,90" />
+    <line x1="110" y1="95" x2="110" y2="138" />
+    <line x1="110" y1="144" x2="110" y2="184" opacity="0.6" />
+    <circle cx="110" cy="196" r="1.8" fill="#94a3b8" stroke="none" />
+    <ellipse cx="98" cy="351" rx="3.4" ry="4.8" />
+    <ellipse cx="122" cy="351" rx="3.4" ry="4.8" />
   </g>
-</g>
+
+  <!-- referral zone on the body -->
+
+    <g filter="url(#blur)" opacity="0.85">
+      <ellipse cx="137" cy="92" rx="15" ry="7.5" fill="#ef4444" opacity="0.34" transform="rotate(-24 137 92)" />
+      <ellipse cx="137" cy="92" rx="9.3" ry="4.7" fill="#dc2626" opacity="0.3" transform="rotate(-24 137 92)" />
+    </g>
+
+  <!-- trigger-point markers -->
+    <g>
+      <circle cx="138" cy="97" r="4.6" fill="#0D9488" stroke="#ffffff" strokeWidth="1.4" />
+      <line x1="135.9" y1="94.9" x2="140.1" y2="99.1" stroke="#ffffff" strokeWidth="1.1" />
+      <line x1="135.9" y1="99.1" x2="140.1" y2="94.9" stroke="#ffffff" strokeWidth="1.1" />
+    </g>
+    <g>
+      <circle cx="66" cy="152" r="4.6" fill="#B45309" stroke="#ffffff" strokeWidth="1.4" />
+      <line x1="63.9" y1="149.9" x2="68.1" y2="154.1" stroke="#ffffff" strokeWidth="1.1" />
+      <line x1="63.9" y1="154.1" x2="68.1" y2="149.9" stroke="#ffffff" strokeWidth="1.1" />
+    </g>
+    <g>
+      <circle cx="116" cy="356" r="4.6" fill="#1E3A5F" stroke="#ffffff" strokeWidth="1.4" />
+      <line x1="113.9" y1="353.9" x2="118.1" y2="358.1" stroke="#ffffff" strokeWidth="1.1" />
+      <line x1="113.9" y1="358.1" x2="118.1" y2="353.9" stroke="#ffffff" strokeWidth="1.1" />
+    </g>
 </svg>

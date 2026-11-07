@@ -42,9 +42,6 @@ export const metadata: Metadata = {
     "миофасциальный релиз",
     "Анатомические поезда",
   ],
-  icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
-  },
 };
 
 export default function RootLayout({
